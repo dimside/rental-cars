@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope'),
+    url('./assets/fonts/Manrope-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ManropeMedium';
+  src: local('ManropeMedium'),
+    url('./assets/fonts/Manrope-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ManropeSemiBold';
+  src: local('ManropeSemiBold'),
+    url('./assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+}
+
+:root {
+  --text-primary: #121417;
+  --text-secondary: #12141780;
+  --model-text: #3470FF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.container {
+  width: 1440px;
+  padding-left: 128px;
+  padding-right: 128px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.modalIsOpen {
+  overflow: hidden;
+}
