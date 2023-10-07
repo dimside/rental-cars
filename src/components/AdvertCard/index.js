@@ -1,1 +1,1 @@
-export {default} from "./AdvertCart"
+export {default} from "./AdvertCard"
