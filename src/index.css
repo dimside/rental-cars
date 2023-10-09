@@ -29,6 +29,11 @@
   --header-bcg: #f4f4fd;
   --title-about: #f4f4fd;
   --text-about: #ffffff;
+  --backdrop-color: #12141780;
+  --condition-color: #f9f9f9;
+  --condition-text: #363535;
+  --value-color: #3470ff;
+  --hover-color: #0B44CD;
 }
 
 html {
@@ -79,7 +84,7 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

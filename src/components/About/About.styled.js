@@ -46,6 +46,12 @@ export const CatalogButton = styled(Link)`
   background-color: transparent;
   font-size: 24px;
   color: var(--text-about);
+  &:hover div {
+    background-color: var(--nav-active);
+  }
+  &:hover {
+    color: var(--nav-active);
+  }
 `;
 
 export const ArrowIcon = styled.div`

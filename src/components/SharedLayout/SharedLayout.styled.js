@@ -25,4 +25,8 @@ export const Nav = styled(NavLink)`
   &.active {
     color: var(--nav-active);
   }
+
+  &:hover {
+    scale: 1.1;
+  }
 `;

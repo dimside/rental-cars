@@ -14,23 +14,29 @@ export const ImageContainer = styled.div`
   border-radius: 14px;
   overflow: hidden;
   margin-bottom: 14px;
+  background-color: #4D5AE530;
 `;
 
 export const HeartIcon = styled(Heart)`
   position: absolute;
   top: 14px;
   right: 14px;
-  fill: none;
-  stroke: var(--heart-stroke);
+  fill: ${({ fill }) => fill};
+  stroke: ${({ stroke }) => stroke};
+
+  &:hover {
+    scale: 1.3;
+  }
 `;
 
 export const Image = styled.img`
   height: 100%;
-  object-fit: cover;
+  object-fit: ${({ fitType }) => fitType};
 `;
 
 export const CarInfoCantainer = styled.div`
   display: flex;
+  justify-content: space-between;
   width: 100%;
   font-family: ManropeMedium;
   line-height: 24px;
@@ -38,7 +44,6 @@ export const CarInfoCantainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  margin-right: 87px;
   font-size: inherit;
   font-weight: inherit;
 `;
@@ -50,11 +55,14 @@ export const Model = styled.span`
 export const AdvertInfoContainer = styled.ul`
   display: flex;
   width: 100%;
+  height: 18px;
   font-family: Manrope;
   font-size: 12px;
   line-height: 18px;
   color: var(--text-secondary);
   margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const VectorIcon = styled(Vector)`
@@ -72,4 +80,8 @@ export const Button = styled.button`
   font-family: ManropeSemiBold;
   font-size: 14px;
   line-height: 20px;
+
+  &:hover {
+    background-color: var(--hover-color);
+  }
 `;

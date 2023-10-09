@@ -8,7 +8,7 @@ const SharedLayout = () => {
       <Header>
         <Container className="container">
           <Navigation>
-            <Nav to="/">Home</Nav>
+            <Nav to="/">About</Nav>
             <Nav to="/catalog">Catalog</Nav>
             <Nav to="/favorites">Favorites</Nav>
           </Navigation>
