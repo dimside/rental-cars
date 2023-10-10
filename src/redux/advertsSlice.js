@@ -6,6 +6,7 @@ const initialState = {
   favorites: [],
   isLoading: false,
   error: null,
+  filter: { carBrand: "", price: "", from: "", to: "" },
 };
 
 const handlePending = state => {
@@ -14,7 +15,7 @@ const handlePending = state => {
 
 const handleFulfilled = (state, { payload }) => {
   state.isLoading = false;
-  state.items = payload;
+  state.items = [...state.items, ...payload];
 };
 
 const handleRejected = (state, { payload }) => {
@@ -32,6 +33,9 @@ const advertsSlice = createSlice({
     delFavorite(state, { payload }) {
       state.favorites = state.favorites.filter(({ id }) => id !== payload);
     },
+    changeFilter(state, { payload }) {
+      state.filter = payload;
+    },
   },
   extraReducers: builder => {
     builder
@@ -42,4 +46,4 @@ const advertsSlice = createSlice({
 });
 
 export const advertsReducer = advertsSlice.reducer;
-export const { addFavorite, delFavorite } = advertsSlice.actions;
+export const { addFavorite, delFavorite, changeFilter } = advertsSlice.actions;

@@ -1,45 +1,68 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { getAdvertsThunk } from 'redux/operations';
-import { selectAdverts, selectIsLoading } from 'redux/selector';
+import { selectAdverts, selectFilter, selectIsLoading } from 'redux/selector';
 
 import AdvertCard from 'components/AdvertCard';
 import { Button, Container, List } from './AdvertList.styled';
-import { useSearchParams } from 'react-router-dom';
 import Spinner from 'components/Spinner';
 
 const AdvertList = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [page, setPage] = useState(1);
 
   const dispatch = useDispatch();
 
-  let pageNumber = searchParams.get('p') ?? 1;
-
   useEffect(() => {
-    dispatch(getAdvertsThunk(pageNumber));
-  }, [dispatch, pageNumber]);
+    dispatch(getAdvertsThunk(page));
+  }, [dispatch, page]);
 
   const handlePage = () => {
-    setSearchParams({ p: Number(pageNumber) + 1 });
+    setPage(prev => prev + 1);
   };
 
+  const filter = useSelector(selectFilter);
   const adverts = useSelector(selectAdverts);
   const isLoading = useSelector(selectIsLoading);
+
+  const filteredAdverts = adverts.filter(({ make, rentalPrice, mileage }) => {
+    if (
+      (filter.make === '' || make === filter.make) &&
+      (filter.rentalPrice === '' ||
+        Number(rentalPrice.slice(1)) <= filter.rentalPrice) &&
+      (filter.from === '' || mileage >= filter.from) &&
+      (filter.to === '' || mileage <= filter.from)
+    ) {
+      return true;
+    }
+    return false;
+  });
+
+  const arrForRender = filteredAdverts.length !== 0 ? filteredAdverts : adverts;
+
+  useEffect(() => {
+    const height = 426;
+    if (adverts.length > 8) {
+      window.scrollBy({
+        top: height * 1.5,
+        behavior: 'smooth',
+      });
+    }
+  }, [adverts]);
 
   return (
     <Container>
       <List>
-        {adverts.map(item => (
+        {arrForRender.map(item => (
           <AdvertCard key={item.id} info={item} />
         ))}
       </List>
-      {adverts.length === 8 && (
+      {adverts.length < 34 && (
         <Button type="button" onClick={handlePage}>
           Load more
         </Button>
       )}
-      {isLoading && <Spinner/>}
+      {isLoading && <Spinner />}
     </Container>
   );
 };

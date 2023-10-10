@@ -34,6 +34,9 @@
   --condition-text: #363535;
   --value-color: #3470ff;
   --hover-color: #0B44CD;
+  --label-text: #8A8A89;
+  --input-bcg: #F7F7FB;
+  --select-text: #12141733;
 }
 
 html {
