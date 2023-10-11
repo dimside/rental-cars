@@ -61,6 +61,6 @@ or
 ### Contact
 
 If you have any questions or would like to reach out, please contact Dmytro
-Balynets at [dmytro.balynets@gmail.com](dmytro.balynets@gmail.com).
+Balynets at [dmytro.balynets@gmail.com](mailto:dmytro.balynets@gmail.com).
 
-[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/dimside/rental-car)
+[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/dimside)
