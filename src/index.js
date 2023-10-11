@@ -9,7 +9,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter basename="/rental-cars">
         <PersistGate loading={null} persistor={persistor}>
@@ -17,5 +17,5 @@ root.render(
         </PersistGate>
       </BrowserRouter>
     </Provider>
-  // </React.StrictMode>
+  </React.StrictMode>
 );
