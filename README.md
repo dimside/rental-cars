@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Getting Started with Rental Cars Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an application for a company that provides car rental services in
+Ukraine. The application consists of 3 pages:
 
-## Available Scripts
+- Home page with a general description of the services provided by the company.
+- A page containing a catalog of cars of various configurations, which the user
+  can filter by brand, price per hour of car rental and the number of kilometers
+  covered by the car during its operation (mileage).
+- Page with ads that have been added to favorites by the user.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- React - JavaScript library for user interface development.
+- React Router - For routing and navigation between pages.
+- Redux Toolkit - The official, opinionated toolset for efficient Redux
+  development
+- Redux Persist - Persist and rehydrate a redux store.
+- Axios - Axios is a promise-based HTTP Client
+- MockAPI - For simulating a backend
+- @emotion/styled - a library designed for writing css styles with JavaScript.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get started with this project, follow these steps:
 
-### `npm test`
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install the required dependencies using:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+   npm install
+```
 
-### `npm run build`
+or
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server with:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+   npm start
+```
 
-### `npm run eject`
+5. Open your web browser and visit
+   [http://localhost:3000/](http://localhost:3000/) to access the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Visit the [Rental Cars Web App](https://github.com/dimside/rental-cars)
+2. Go to the catalog to study offers and search for the car you are interested
+   in using the filter.
+3. Use the "Load more" button to see more offers.
+4. Click on the “Learn more” button to view detailed information about the
+   vehicle you are interested in.
+5. By clicking on the heart icon, add the ad to your favorites
+6. Visit the "Favorites" page to see your saved listings.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you have any questions or would like to reach out, please contact Dmytro
+Balynets at [dmytro.balynets@gmail.com](dmytro.balynets@gmail.com).
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/dimside/rental-car)

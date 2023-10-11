@@ -14,7 +14,7 @@ export const ImageContainer = styled.div`
   border-radius: 14px;
   overflow: hidden;
   margin-bottom: 14px;
-  background-color: #4D5AE530;
+  background-color: #4d5ae530;
 `;
 
 export const HeartIcon = styled(Heart)`

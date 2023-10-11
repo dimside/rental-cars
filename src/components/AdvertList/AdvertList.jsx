@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { getAdvertsThunk } from 'redux/operations';
 import { selectAdverts, selectFilter, selectIsLoading } from 'redux/selector';
 
+import Spinner from 'components/Spinner';
 import AdvertCard from 'components/AdvertCard';
 import { Button, Container, List } from './AdvertList.styled';
-import Spinner from 'components/Spinner';
 
 const AdvertList = () => {
   const [page, setPage] = useState(1);
@@ -31,7 +31,7 @@ const AdvertList = () => {
       (filter.rentalPrice === '' ||
         Number(rentalPrice.slice(1)) <= filter.rentalPrice) &&
       (filter.from === '' || mileage >= filter.from) &&
-      (filter.to === '' || mileage <= filter.from)
+      (filter.to === '' || mileage <= filter.to)
     ) {
       return true;
     }

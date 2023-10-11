@@ -1,5 +1,5 @@
-const { RingLoader } = require('react-spinners');
-const { Backdrop } = require('./Spinner.styled');
+import { RingLoader } from 'react-spinners';
+import { Backdrop } from './Spinner.styled';
 
 const Spinner = () => {
   return (

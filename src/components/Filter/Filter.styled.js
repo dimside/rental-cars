@@ -21,6 +21,32 @@ export const Label = styled.label`
   line-height: 18px;
 `;
 
+export const BrandPlug = styled.div`
+  position: absolute;
+  top: 27px;
+  left: 1px;
+  display: flex;
+  width: 222px;
+  height: 46px;
+  border-radius: 14px;
+  padding: 14px 8px 14px 18px;
+  margin-right: 18px;
+  background-color: var(--input-bcg);
+  pointer-events: none;
+
+  & p {
+    color: var(--text-primary);
+    font-family: ManropeMedium;
+    font-size: 18px;
+    line-height: 20px;
+    margin-right: 51px;
+  }
+
+  & svg {
+    transform: rotate(180deg);
+  }
+`;
+
 export const BrandInput = styled.select`
   width: 224px;
   height: 48px;
@@ -28,16 +54,21 @@ export const BrandInput = styled.select`
   padding: 14px 8px 14px 18px;
   margin-right: 18px;
   background-color: var(--input-bcg);
-  border: 1px solid rgba(18, 20, 23, 0.05);
-  box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+  border: none;
 
   color: var(--select-text);
   font-family: ManropeMedium;
   font-size: 16px;
   line-height: 20px;
 
-  &:hover {
-    border-color: var(--hover-color);
+  &:hover,
+  focus {
+    border: 1px solid var(--hover-color);
+    outline: none;
+  }
+
+  &:focus + div svg {
+    transform: rotate(0deg);
   }
 
   &::-webkit-scrollbar {

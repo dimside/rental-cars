@@ -1,4 +1,10 @@
-import { Container, Title, AboutText, ArrowIcon, CatalogButton } from './About.styled';
+import {
+  Container,
+  Title,
+  AboutText,
+  ArrowIcon,
+  CatalogButton,
+} from './About.styled';
 import { ReactComponent as Arrow } from '../../assets/images/icons/chevron-right.svg';
 
 const About = () => {

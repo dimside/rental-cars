@@ -16,9 +16,11 @@ import {
 } from './AdvertCard.styled';
 
 import noImage from '../../assets/images/noimage.png';
+
+import Modal from 'components/Modal';
+
 import { addFavorite, delFavorite } from 'redux/advertsSlice';
 import { selectFavorites } from 'redux/selector';
-import Modal from 'components/Modal';
 
 const portal = document.querySelector('#modal');
 

@@ -1,6 +1,14 @@
-import { Container, Header, Nav, Navigation } from './SharedLayout.styled';
+import { Outlet } from 'react-router-dom';
 
-const {  Outlet } = require('react-router-dom');
+import {
+  Container,
+  Header,
+  Logo,
+  Nav,
+  Navigation,
+} from './SharedLayout.styled';
+
+import logo from '../../assets/images/logo.png';
 
 const SharedLayout = () => {
   return (
@@ -8,7 +16,12 @@ const SharedLayout = () => {
       <Header>
         <Container className="container">
           <Navigation>
-            <Nav to="/">About</Nav>
+            <Nav to="/">
+              <Logo>
+                <img src={logo} alt="Logo" />
+                <p>Rental Cars</p>
+              </Logo>
+            </Nav>
             <Nav to="/catalog">Catalog</Nav>
             <Nav to="/favorites">Favorites</Nav>
           </Navigation>

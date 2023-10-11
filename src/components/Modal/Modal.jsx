@@ -81,6 +81,7 @@ const Modal = ({ info, closeModal }) => {
           <li>Year: {year}</li> <VectorIcon />
           <li>Type: {type}</li>
         </CarInfoWrap>
+
         <CarInfoWrap style={{ marginBottom: 14 }}>
           <li>Fuel Consumption: {fuelConsumption}</li> <VectorIcon />
           <li>Engine Size: {engineSize}</li>
@@ -98,6 +99,7 @@ const Modal = ({ info, closeModal }) => {
             </InfoItem>
           ))}
         </CarInfoWrap>
+
         <CarInfoWrap style={{ marginBottom: 24 }}>
           {functionalities.map(info => (
             <InfoItem key={nanoid()}>
@@ -116,8 +118,11 @@ const Modal = ({ info, closeModal }) => {
           </ConditionItem>
           <ConditionItem>{rentalConditions.split('\n')[1]}</ConditionItem>
         </ConditionWrap>
+
         <ConditionWrap style={{ marginBottom: 24 }}>
-          <ConditionItem style={{flexGrow: "grow"}}>{rentalConditions.split('\n')[2]}</ConditionItem>
+          <ConditionItem style={{ flexGrow: 'grow' }}>
+            {rentalConditions.split('\n')[2]}
+          </ConditionItem>
           <ConditionItem>
             Mileage:{' '}
             <Value>
@@ -130,6 +135,7 @@ const Modal = ({ info, closeModal }) => {
             Price: <Value>{rentalPrice.slice(1)}$</Value>
           </ConditionItem>
         </ConditionWrap>
+
         <RentalButton href="tel:+380730000000">Rental car</RentalButton>
       </ModalCard>
     </Backdrop>

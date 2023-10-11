@@ -6,16 +6,20 @@ const initialState = {
   favorites: [],
   isLoading: false,
   error: null,
-  filter: { carBrand: "", price: "", from: "", to: "" },
+  filter: { carBrand: '', price: '', from: '', to: '' },
 };
 
 const handlePending = state => {
   state.isLoading = true;
 };
 
-const handleFulfilled = (state, { payload }) => {
+const handleFulfilled = (state, action) => {
   state.isLoading = false;
-  state.items = [...state.items, ...payload];
+  if (action.meta.arg === 1) {
+    state.items = action.payload;
+  } else {
+    state.items = [...state.items, ...action.payload];
+  }
 };
 
 const handleRejected = (state, { payload }) => {

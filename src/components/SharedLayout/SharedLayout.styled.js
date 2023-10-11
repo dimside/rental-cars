@@ -16,7 +16,17 @@ export const Navigation = styled.nav`
   display: flex;
   justify-content: space-around;
   font-family: ManropeSemiBold;
-  font-size: 38px;
+  font-size: 24px;
+`;
+
+export const Logo = styled.div`
+  display: flex;
+
+  & img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
 `;
 
 export const Nav = styled(NavLink)`
